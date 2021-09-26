@@ -1,0 +1,13 @@
+
+
+
+
+abhi1=[12, 7, 5, 64, -14]
+avni= abhi1[:1]+list[7:]
+print(avni)
+avni=abhi1[:-14]
+print(avni)
+
+abhi2=[12, 14, -95, 3]
+q=abhi2[:14]+List[-95:]
+print(q)
