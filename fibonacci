@@ -1,0 +1,20 @@
+#python program to print fibonnaci series
+
+i= int(input("enter the number from where you have to start the series"))
+x=0
+z=1
+count=0
+if i <=0:
+    print("enter number from one to infinity")
+elif i==1:
+    print("fibonacci series ",i,":")
+    print(x)
+
+else:
+    print("fibonacci series")
+    while count < i:
+        print(x)
+        y=x+z
+        x=z
+        z=y
+        count +=1
