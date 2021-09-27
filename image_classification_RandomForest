@@ -1,0 +1,65 @@
+
+import numpy as np
+import pandas as pd
+from matplotlib import pyplot as plt
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.cross_validation import train_test_split
+
+#using pandas to read values
+data = pd.read_csv('mnist_test.csv')
+
+#viewig column head
+data.head()
+
+#extracting data from the dataset and viewing them up close
+a = data.iloc[3, 1:].values
+
+#reshaping the exracted data into reasonable size
+a = a.reshape(28, 28).astype('unit8')
+plt.imshow(a)
+
+#preparing the data
+#separating labels and data values
+df_x = data.iloc[:, 1:]
+df_y = data.iloc[:,0]
+
+
+#creating test and train sizes/batches
+x_train= (),
+x_test= (),
+y_train = (),
+y_test = train_test_split(df_x, df_y, test_size = 0.2, random_state= 4)
+
+
+#check data
+y_train.head()
+
+#call rf classifier
+rf = randomForestClassifier(n_estimator=100)
+
+#fit the model
+rf.fit(x_train, y_train)
+
+#prediction on the test data
+pred = rf.predict(x_test)
+pred
+
+
+#check predictio accuracy
+a= y_test.values
+
+
+
+count=0
+for i in range(len(pred)):
+    if pred[i]==a[i]:
+        count=count+1
+
+
+
+count
+
+len(pred)
+
+
+#accuracy value
